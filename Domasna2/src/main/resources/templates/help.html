@@ -1,0 +1,123 @@
+<section xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:if="${session.en==null}" style="margin-left: 35px; margin-right:auto;margin-left: auto; width:auto ;matogin-top:-50px">
+
+<h4  style="text-align: center; background-color: lightgray; opacity: 70%;
+margin-top:130px;
+margin-bottom: 200px;
+margin-left:auto;
+margin-right:auto;
+font-size: 20px;
+color: red;">
+
+    <ul>
+        <li><b>
+             Кога корисникот ќе ја вклучи веб базираната апликација веднаш се вклучува Почетната страница на апликацијата, која во горниот дел, односно header делот содржи мени, односно копчињата “Почетна”, “Аптеки”, “Локатор”,  поле за “Search”,  “Најави се”, “Регистрирај се”, “Помош” и јазична поддршка.
+        </b>
+        </li>
+    <br>
+        <li>
+            <b>
+                 Со клик на копчето “Аптеки” корисникот се пренасочува кон страна каде што се прикажани сите аптеки и соодветно за секоја поединечно можат да се видат информациите како името, локацијата и самата адреса, а со клик на копчето прикажи повеќе се прикажуваат и повеќе информации за самата аптека (како работното време, некои дејности, телефонски броеви и слично) и се прикажува мапата со локатор за каде точно е лоцирана истата, како и оддалеченоста до неа од самата локација на корисникот. Од оваа страна кога ќе се кликне копчето “Почетна” корисникот се пренасочува на почетната страница на апликација на која што бил кога ја вклучил самата апликација.
+            </b>
+        </li>
+    <br>
+        <li><b>
+             Со клик на копчето “Локатор” се прикажува глобална мапа каде првично се лоцираат сите аптеки. Има можност за пребарување според град , име на аптека и адреса, но и според некои од дополнителните информации за самите аптеки. Кога корисникот пребарува според одреден град или пак според име на аптека, на мапата се прикажуваат само аптеките кои што се наоѓаат во тој град или пак доколку е според името на аптеката на мапата се прикажуваат сите аптеки кои се под тоа име во сите градови, како и нивната оддалеченост од локацијата на корисникот. Доколку пак од оваа страна се кликне копчето “Почетна” корисникот повторно се пренасочува на почетната страница на апликација на која што бил кога ја вклучил самата апликација.
+        </b>
+        </li>
+            <br>
+        <li>
+            <b>
+                 Со полето “Search” може да се пребарува соодветна аптека и истата се лоцира на самата мапа.            </b>
+        </li>
+    <br>
+        <li>
+            <b>
+                 Со копчето “Регистрирај се” корисникот ќе биде пренасочен кон нова страница каде што ќе може да креира свој профил со соодветни информации за него, кои пак информации подоцна може да ги види со кликнување на неговото корисничко име во горниот десен агол.
+            </b>
+        </li>
+    <br>
+        <li>
+            <b>
+                 Со копчето “Најави се” корисникот се пренасочува кон нова страница каде што може да се најави со неговата претходна регистрација. Тука не е потребно да се внесуваат сите информации кои што биле внесени при креирање на самиот профил, туку само корисничкото име, односно е-mail-от и неговата лозинка.            </b>
+        </li>
+    <br>
+        <li>
+            <b>
+                 Во горниот десен агол, после копчето “Регистрирај се”, корисникот има можност да го смени јазикот од македонски на англиски и обратно од англиски на македонски.
+            </b>
+        </li>
+            <br>
+    <li> <b>      Во најдолниот дел, односно footer делот од самата апликација корисникот може да најде соодветни информации за контакт.
+
+    </b>
+    </li>
+
+    <br>
+    </ul>
+</h4>
+</div>
+
+<div  th:if="${session.en!=null}" style="margin-left: 35px; margin-right:auto;margin-left: auto; width: auto;margin-top:-50px">
+
+    <h4  style="text-align: center; background-color: lightgray; opacity: 70%;
+margin-top:130px;
+margin-bottom: 200px;
+margin-left:auto;
+margin-right:auto;
+font-size: 20px;
+color: red;">
+
+
+
+        <ul>
+            <li><b>
+                When the user launches the web-based application, the Home page of the application is immediately activated, which in the upper part, in the header section contains a menu, buttons "Home", "Pharmacies", "Locator", field for "Search", "Log in”,“ Sign in”,“Help ”and language support.            </b>
+            </li>
+            <br>
+            <li>
+                <b>
+                    By clicking on the button "Pharmacies" the user is redirected to a page where all pharmacies are displayed and according to each one, can be seen information such as name, location and address, and by clicking the button “Show more”, we have more information about the pharmacy (such as working hours, some activities, telephone numbers, etc.) and displays the map with a locator for where exactly it is located, as well as the distance to it from the location of the user. From this page, when the "Home" button is clicked, the user is redirected to the home page of the application he was on when he started the application.
+                </b>
+            </li>
+            <br>
+            <li><b>
+                Clicking on the "Locator" button displays a global map where all pharmacies are initially located. It is possible to search by city, pharmacy name and address, but also by some of the additional information about the pharmacies. When the user searches by a specific city or by name of a pharmacy, the map shows only the pharmacies that are located in that city or if it is by the name of the pharmacy, the map shows all the pharmacies that are under that name in all cities, and their distance from the user's location. If the "Home" button is clicked on this page, the user is redirected to the home page of the application he was on when he started the application.
+
+            </b>
+            </li>
+            <br>
+            <li>
+                <b>        With the field "Search" you can search for a suitable pharmacy, which will be located directly on the map.</b>
+            </li>
+            <br>
+            <li>
+                <b>
+                    With the button "Register" the user will be redirected to a new page where he will be able to create his profile with relevant information about him, which information can later be seen by clicking on his username in the upper right corner.                </b>
+            </li>
+            <br>
+            <li>
+                <b>        With the button "Login" the user is redirected to a new page where he can log in with his previous registration. It is not necessary to enter all the information that was entered when creating the profile, but only the username (e-mail) and its password.</b>
+            </li>
+            <br>
+            <li>
+                <b>
+                    In the upper right corner, after the button "Register", the user has the opportunity to change the language from Macedonian to English and vice versa from English to Macedonian.
+                </b>
+            </li>
+            <br>
+            <li> <b>             In the lowest part, the footer part of the application, the user can find appropriate contact information.
+
+
+            </b>
+            </li>
+
+            <br>
+        </ul>
+    </h4>
+</div>
+
+
+</section>
+
+

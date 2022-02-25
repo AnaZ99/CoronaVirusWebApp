@@ -1,0 +1,77 @@
+
+<section xmlns:th="http://www.w3.org/1999/xhtml"  class="jumbotron text-center">
+    <div class="container">
+
+        <div th:if="${session.en==null}">
+        <div >
+            <h2 class="jumbotron-heading" th:text="Аптеки"></h2>
+        </div>
+
+        <div th:if="${session.koj}">
+        <h2 class="jumbotron-heading" th:text="${session.koj + ' APTEKI'}"></h2>
+        </div>
+        </div>
+        <div th:if="${session.en!=null}">
+            <div >
+                <h2 class="jumbotron-heading" th:text="Pharmacies"></h2>
+            </div>
+
+            <div th:if="${session.koj}">
+                <h2 class="jumbotron-heading" th:text="${session.koj + ' Pharmachy'}"></h2>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-12" th:if="${apteki.size() > 0}">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <div th:if="${session.en==null}">
+                            <th scope="col">Име </th>
+                            <th scope="col">Локација</th>
+                            <th scope="col">Адреса</th>
+                            </div>
+                        <div th:if="${session.en!=null}">
+                            <th scope="col">Name </th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Address</th>
+                        </div>
+
+
+
+                        </thead>
+                        <tbody>
+                        <tr th:each="a : ${apteki}">
+                            <td th:text="${a.getIme()}"></td>
+                            <td th:text="${a.getLokacija()}"></td>
+                            <td th:text="${a.getAdresa()}"></td>
+
+                            <td th:if="${session.en!=null}" >
+                                <a th:href="@{'/show/prikaz/{id}' (id=${a.getId()})}"
+                                   class="btn btn-sm btn-info"><i class="fa fa-trash"> More...</i></a>
+                            </td>
+
+                            <td th:if="${session.en==null}" >
+                                <a th:href="@{'/show/prikaz/{id}' (id=${a.getId()})}"
+                                   class="btn btn-sm btn-info"><i class="fa fa-trash">Повеќе...</i></a>
+                            </td>
+
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
