@@ -14,6 +14,33 @@ import java.util.ArrayList;
 
 @Controller
 public class events {
+
+    private final NewServiceInterface newServiceInterface;
+
+    public events(NewServiceInterface newServiceInterface) {
+        this.newServiceInterface = newServiceInterface;
+    }
+
+    @GetMapping("/baza")
+    public String vleciOdBaza(Model model)
+    {
+        ArrayList list=newServiceInterface.fi();
+        if(list.size()==0)
+        {
+            model.addAttribute("nemanisto",1);
+        }
+        else
+        {
+            model.addAttribute("nemanisto",2);
+        }
+        model.addAttribute("nastani",newServiceInterface.fi());
+        model.addAttribute("kokos","lala");
+        System.out.println(newServiceInterface.fi().size());
+
+        return "map.html";
+    }
+
+
     @GetMapping({"/events",""})
     public String gett(Model model)
     {

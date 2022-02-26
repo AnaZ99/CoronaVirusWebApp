@@ -121,7 +121,7 @@
 
 
 
-  <form th:method="GET" th:action="@{'/search'}">
+  <form  th:method="GET" th:action="@{'/search'}">
 
 
     <input id="datum" type="text" name="date"  />
@@ -159,6 +159,9 @@
   <script th:inline="javascript">
     var myval = /*[[${nastani}]]*/ "Test";
     var nemanisto = /*[[${nemanisto}]]*/ "Test";
+    console.log(myval.length)
+
+
 
 console.log(nemanisto);
     let mymap=""
