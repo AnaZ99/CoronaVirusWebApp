@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.Controllers;
 
+import com.example.demo.CoronaEvents;
+import com.example.demo.NewServiceInterface;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.bigquery.*;
 
