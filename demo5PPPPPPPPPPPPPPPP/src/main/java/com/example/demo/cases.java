@@ -152,7 +152,10 @@ listica=new ArrayList<>();
                 {
                     event2=albums.getJSONObject(i-1);
                     String [] s=event.getString("Date").split("T");
-                    listica.add(new Drzava(s[0],event.getInt("Confirmed")-event2.getInt("Confirmed"),event.getInt("Deaths")-event2.getInt("Deaths")));
+                    Drzava d=new Drzava(s[0],event.getInt("Confirmed")-event2.getInt("Confirmed"),event.getInt("Deaths")-event2.getInt("Deaths"));
+                    if(event2.getInt("Confirmed")<=event.getInt("Confirmed") &&event2.getInt("Deaths")<=event.getInt("Deaths") ) {
+                        listica.add(d);
+                    }
                 }else{
 
                     //System.out.println(event.getString("Country") + " " + event.getInt("Confirmed") + " " +event.getInt("Deaths"));
