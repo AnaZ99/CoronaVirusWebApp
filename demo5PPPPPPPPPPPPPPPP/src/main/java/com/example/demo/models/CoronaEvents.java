@@ -1,11 +1,10 @@
-package com.example.demo;
+package com.example.demo.models;
 
 import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Data
 @Entity
